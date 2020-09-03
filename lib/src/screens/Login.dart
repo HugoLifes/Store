@@ -14,7 +14,7 @@ class LoginPage extends StatelessWidget {
           'Login',
           style: TextStyle(color: Colors.black),
         ),
-        elevation: 0,
+        elevation: 3,
         brightness: Brightness.dark,
         backgroundColor: Color.fromRGBO(254, 219, 208, 1.0),
         leading: IconButton(
@@ -112,8 +112,8 @@ class LoginPage extends StatelessWidget {
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             alignment: Alignment.center,
-                            fit: BoxFit.fitHeight,
-                            image: AssetImage('assets/images/image2.png'))),
+                            //fit: BoxFit.fitHeight,
+                            image: AssetImage('assets/images/x3/diamond.png'))),
                   )
                 ],
               ),

@@ -98,8 +98,8 @@ class SignUpPage extends StatelessWidget {
                   height: MediaQuery.of(context).size.height / 3,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                    image: AssetImage('assets/images/image2.png'),
-                    fit: BoxFit.fitHeight,
+                    image: AssetImage('assets/images/x3/diamond.png'),
+                    //fit: BoxFit.fitHeight,
                     alignment: Alignment.center,
                   )),
                 )

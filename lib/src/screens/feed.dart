@@ -39,7 +39,7 @@ class Feed extends StatelessWidget {
     return Scaffold(
         // barra de navegacion
         appBar: AppBar(
-          elevation: 0,
+          elevation: 3,
           brightness: Brightness.dark,
           backgroundColor: Color.fromRGBO(254, 219, 208, 1.0),
           //Iconos de busqueda y filtro
