@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
 // ignore: unused_import
 import '../app.dart';
+import 'feed.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -8,9 +10,13 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        title: Text(
+          'Login',
+          style: TextStyle(color: Colors.black),
+        ),
         elevation: 0,
-        brightness: Brightness.light,
-        backgroundColor: Colors.white,
+        brightness: Brightness.dark,
+        backgroundColor: Color.fromRGBO(254, 219, 208, 1.0),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -28,15 +34,15 @@ class LoginPage extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      Text('Login',
-                          style: TextStyle(
-                              fontSize: 30, fontWeight: FontWeight.bold)),
                       SizedBox(
                         height: 20,
                       ),
                       Text(
-                        "Login to your account",
-                        style: TextStyle(fontSize: 15, color: Colors.grey[700]),
+                        "Inicia con tu cuenta",
+                        style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.black,
+                        ),
                       ),
                     ],
                   ),
@@ -64,8 +70,11 @@ class LoginPage extends StatelessWidget {
                         elevation: 0,
                         minWidth: double.infinity,
                         height: 60,
-                        onPressed: () {},
-                        color: Colors.greenAccent[100],
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Feed()));
+                        },
+                        color: Color.fromRGBO(254, 219, 208, 1.0),
                         child: Text(
                           'Sign Up',
                           style: TextStyle(

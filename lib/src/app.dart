@@ -2,6 +2,7 @@ import 'package:coivd_app2/src/screens/Login.dart';
 import 'package:coivd_app2/src/screens/Signup.dart';
 import 'package:flutter/material.dart';
 
+//diseño principal
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class HomePage extends StatelessWidget {
               Column(
                 children: <Widget>[
                   Text(
-                    'Welcome',
+                    'Store',
                     style: TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
@@ -39,8 +40,8 @@ class HomePage extends StatelessWidget {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         alignment: Alignment.center,
-                        fit: BoxFit.fitHeight,
-                        image: AssetImage('assets/images/images.png'))),
+                        //fit: BoxFit.fitHeight,
+                        image: AssetImage('assets/images/x3/diamond.png'))),
               ),
               Column(children: [
                 MaterialButton(
@@ -78,7 +79,7 @@ class HomePage extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => SignUpPage()));
                       },
-                      color: Colors.yellow,
+                      color: Color.fromRGBO(254, 219, 208, 1.0),
                       child: Text(
                         'Sign Up',
                         style: TextStyle(

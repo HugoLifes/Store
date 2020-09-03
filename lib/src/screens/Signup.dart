@@ -5,10 +5,15 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        elevation: 0,
-        brightness: Brightness.light,
-        backgroundColor: Colors.white,
+        title: Text(
+          'Signup',
+          style: TextStyle(color: Colors.black),
+        ),
+        elevation: 3,
+        brightness: Brightness.dark,
+        backgroundColor: Color.fromRGBO(254, 219, 208, 1.0),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -26,17 +31,15 @@ class SignUpPage extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Text(
-                      'Sign up',
-                      style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                    ),
                     SizedBox(
                       height: 20,
                     ),
                     Text(
-                      'Crea tu cuenta, es gratis!',
-                      style: TextStyle(fontSize: 15, color: Colors.grey[700]),
+                      'Crea tu cuenta',
+                      style: TextStyle(fontSize: 23, color: Colors.black),
+                    ),
+                    SizedBox(
+                      height: 20,
                     )
                   ],
                 ),
@@ -65,7 +68,7 @@ class SignUpPage extends StatelessWidget {
                       elevation: 0,
                       minWidth: double.infinity,
                       height: 60,
-                      color: Colors.greenAccent[100],
+                      color: Color.fromRGBO(254, 219, 208, 1.0),
                       child: Text(
                         'Login',
                         style: TextStyle(
