@@ -8,7 +8,7 @@ class SignUpPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text(
-          'Signup',
+          'Sign Up',
           style: TextStyle(color: Colors.black),
         ),
         elevation: 3,
@@ -35,7 +35,7 @@ class SignUpPage extends StatelessWidget {
                       height: 20,
                     ),
                     Text(
-                      'Crea tu cuenta',
+                      'Create your account',
                       style: TextStyle(fontSize: 23, color: Colors.black),
                     ),
                     SizedBox(
@@ -70,7 +70,7 @@ class SignUpPage extends StatelessWidget {
                       height: 60,
                       color: Color.fromRGBO(254, 219, 208, 1.0),
                       child: Text(
-                        'Login',
+                        'Sign Up',
                         style: TextStyle(
                             fontSize: 19, fontWeight: FontWeight.w600),
                       ),
@@ -86,9 +86,9 @@ class SignUpPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Have Account?'),
+                    Text('Have Account? '),
                     Text(
-                      'Login',
+                      'Log In',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                     )

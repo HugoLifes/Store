@@ -11,7 +11,7 @@ class LoginPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text(
-          'Login',
+          'Log In',
           style: TextStyle(color: Colors.black),
         ),
         elevation: 3,
@@ -38,7 +38,7 @@ class LoginPage extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                        "Inicia con tu cuenta",
+                        "Welcome back",
                         style: TextStyle(
                           fontSize: 25,
                           color: Colors.black,
@@ -76,7 +76,7 @@ class LoginPage extends StatelessWidget {
                         },
                         color: Color.fromRGBO(254, 219, 208, 1.0),
                         child: Text(
-                          'Sign Up',
+                          'Log In',
                           style: TextStyle(
                               fontSize: 19, fontWeight: FontWeight.w600),
                         ),
@@ -94,9 +94,9 @@ class LoginPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Do you have acount?'),
+                      Text("Don't have an account? "),
                       Text(
-                        'SignUp',
+                        'Sign Up',
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w600),
                       )

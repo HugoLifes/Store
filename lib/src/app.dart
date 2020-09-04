@@ -9,6 +9,21 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
+          decoration: new BoxDecoration(
+              gradient: LinearGradient(
+                  // colors: [Color.fromRGBO(254, 219, 208, 1.0), Colors.white],
+                  colors: [
+                Color.fromRGBO(254, 219, 208, 1.0),
+                Colors.white,
+                Colors.black
+              ],
+                  stops: [
+                0.1,
+                0.7,
+                0.7
+              ],
+                  begin: FractionalOffset.topRight,
+                  end: FractionalOffset.bottomLeft)),
           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
           width: double.infinity,
           height: MediaQuery.of(context).size.height,
@@ -19,7 +34,7 @@ class HomePage extends StatelessWidget {
               Column(
                 children: <Widget>[
                   Text(
-                    'Store',
+                    'STORE',
                     style: TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
@@ -45,6 +60,7 @@ class HomePage extends StatelessWidget {
               ),
               Column(children: [
                 MaterialButton(
+                  color: Colors.white,
                   minWidth: double.infinity,
                   height: 60,
                   onPressed: () {
@@ -52,7 +68,7 @@ class HomePage extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => LoginPage()));
                   },
                   child: Text(
-                    'Login',
+                    'Log In',
                     style: TextStyle(fontSize: 19, fontWeight: FontWeight.w600),
                   ),
                   shape: RoundedRectangleBorder(
