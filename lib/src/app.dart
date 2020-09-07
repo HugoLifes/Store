@@ -8,6 +8,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color.fromRGBO(254, 219, 208, 1.0),
+      ),
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Container(
           decoration: new BoxDecoration(
