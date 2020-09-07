@@ -22,9 +22,18 @@ class SignUpPage extends StatelessWidget {
         ),
       ),
       body: Container(
-        color: Colors.white,
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
+        decoration: new BoxDecoration(
+            gradient: LinearGradient(
+                // colors: [Color.fromRGBO(254, 219, 208, 1.0), Colors.white],
+                colors: [
+              Colors.white,
+              Color.fromRGBO(254, 219, 208, 1.0),
+            ], stops: [
+          0.3,
+          0.7,
+        ], begin: FractionalOffset.topRight, end: FractionalOffset.bottomLeft)),
         child: Column(
           children: [
             Column(
