@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class Feed extends StatelessWidget {
-  @override //sobreescribe la clase
-
   List<Card> _buildGridCards(BuildContext context) {
     List<Product> products = ProductsRepository.loadProducts(Category.all);
 
@@ -20,8 +18,10 @@ class Feed extends StatelessWidget {
     return products.map((product) {
       return Card(
         clipBehavior: Clip.antiAlias,
+        // ignore: todo
         // TODO: Adjust card heights (103)
         child: Column(
+          // ignore: todo
           // TODO: Center items on the card (103)
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -30,6 +30,8 @@ class Feed extends StatelessWidget {
               child: Image.asset(
                 product.assetName,
                 package: product.assetPackage,
+                fit: BoxFit.fitWidth,
+                // ignore: todo
                 // TODO: Adjust the box size (102)
               ),
             ),
@@ -37,6 +39,7 @@ class Feed extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 8.0),
                 child: Column(
+                  // ignore: todo
                   // TODO: Align labels to the bottom and center (103)
                   crossAxisAlignment: CrossAxisAlignment.start,
                   // TODO: Change innermost Column (103)
@@ -61,6 +64,8 @@ class Feed extends StatelessWidget {
       );
     }).toList();
   }
+
+  @override //sobreescribe la clase
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,7 +110,6 @@ class Feed extends StatelessWidget {
             crossAxisCount: 2,
             padding: EdgeInsets.all(16.0),
             childAspectRatio: 8.0 / 9.0,
-
             //Tarjetas de ventas
             children: _buildGridCards(context)));
   }
