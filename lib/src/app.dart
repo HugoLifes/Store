@@ -1,6 +1,7 @@
 import 'package:coivd_app2/src/screens/Login.dart';
 import 'package:coivd_app2/src/screens/Signup.dart';
 import 'package:flutter/material.dart';
+//import '../colors.dart';
 
 //diseño principal
 class HomePage extends StatelessWidget {
