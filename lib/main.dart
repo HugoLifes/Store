@@ -26,6 +26,7 @@ ThemeData _buildShrineTheme() {
     buttonBarTheme: base.buttonBarTheme.copyWith(
       buttonTextTheme: ButtonTextTheme.accent,
     ),
+    //appBarTheme: base.appBarTheme.copyWith(brightness: Brightness.dark),
     scaffoldBackgroundColor: kShrineBackgroundWhite,
     cardColor: kShrineBackgroundWhite,
     textSelectionColor: kShrinePink100,
