@@ -26,6 +26,34 @@ samples, guidance on mobile development, and a full API reference. -->
 <center>DAISY RAMIREZ SANTILLAN - 169822</center>
 <br>
 
+## Resumen
 
-## Introducción
+## 1. Introducción
 
+### 1.1 Propósito
+
+### 1.2 Alcance
+
+### 1.3 Definiciones y acrónimos
+
+### 1.4 Referencias
+
+## 2. Descripción general
+
+### 2.1 Perspectiva del producto
+
+### 2.2 Funcionalidad del producto
+
+### 2.3 Características de usuario
+
+### 2.4 Restricciones
+
+## 3. Requerimientos
+
+### 3.1 Requerimientos funcionales
+
+### 3.2 Diseño
+
+#### 3.2.1 Interfaz de usuario
+
+## Anexo A: Planificación inicial del proyecto
