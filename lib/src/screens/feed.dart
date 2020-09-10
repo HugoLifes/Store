@@ -2,6 +2,7 @@ import 'package:coivd_app2/model/product.dart';
 import 'package:coivd_app2/model/products_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:coivd_app2/colors.dart';
 
 class Feed extends StatelessWidget {
   List<Card> _buildGridCards(BuildContext context) {

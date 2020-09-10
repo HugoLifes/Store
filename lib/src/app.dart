@@ -1,12 +1,18 @@
 import 'package:coivd_app2/src/screens/Login.dart';
 import 'package:coivd_app2/src/screens/Signup.dart';
 import 'package:flutter/material.dart';
+//import '../colors.dart';
 
 //diseño principal
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color.fromRGBO(254, 219, 208, 1.0),
+      ),
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Container(
           decoration: new BoxDecoration(
