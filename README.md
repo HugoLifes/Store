@@ -57,13 +57,6 @@ encontrara todas las cosas que necesita en la palma de su mano  -->
 
 En este documento se encontrará información referenciada a la aplicacion, el planteamiento del porqué la realización del proyecto, las misiones y objetivos del mismo, con la finalidad de dar mejor entendimiento a nuestro enfoque en el proyecto se encontrarán, los requerimientos necesarios para la realización de este proyecto algunas restricciones y algunas muestras de interfaz de diseño aplicado en la aplicación, al leer el documento se le facilitará el entendimiendo y el porqué de nuestro proyecto.
 
-__creo que esto me suena mas a resumen, o al menos que quitemos el resumen y lo dejemos así como intro__
-
-hagamos una lista de lo que tenemos y lo que nos falta, también hay que tener en cuenta las cosas de documentación
-
-
-dijo que dividieramos todas las actividades que consideremos en 10 semanas
-
 ### 1.1 Planteamiento del problema
 __¿Por qué una aplicación para vender productos?__ 
 
