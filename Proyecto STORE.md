@@ -49,7 +49,7 @@ suponiendo que somos una tienda como h&m la conoces? pues ya sabran que hay una 
 o no se que tengas e mente -->
 
 
-## Resumen
+<!-- ## Resumen -->
 
 <!-- STORE una app para vender algunos productos de la vida cotidiana, con un sencillo uso intuitivo
 encontrara todas las cosas que necesita en la palma de su mano  -->
@@ -96,5 +96,7 @@ Nuestra misión es hacer que nuestros clientes encuentren todo lo necesario para
 ### 3.2 Diseño
 
 #### 3.2.1 Interfaz de usuario
+-->
+## Anexo A: Planificación inicial del proyecto 
 
-## Anexo A: Planificación inicial del proyecto -->
+<img src="cronograma.png" alt="" width="100%">
