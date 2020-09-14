@@ -3,6 +3,45 @@ import 'package:coivd_app2/model/products_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:coivd_app2/colors.dart';
+import 'backdrop.dart';
+import 'category_menu_page.dart';
+
+class Base extends StatefulWidget {
+  @override
+  _BaseState createState() => _BaseState();
+}
+
+class _BaseState extends State<Base> {
+  Category _currentCategory = Category.all;
+
+  void _onCategoryTap(Category category) {
+    setState(() {
+      _currentCategory = category;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Shrine',
+      // TODO: Change home: to a Backdrop with a HomePage frontLayer (104)
+      home: Backdrop(
+        // TODO: Make currentCategory field take _currentCategory (104)
+        currentCategory: Category.all,
+        // TODO: Pass _currentCategory for frontLayer (104)
+        frontLayer: Feed(),
+        // TODO: Change backLayer field value to CategoryMenuPage (104)
+        backLayer: CategoryMenuPage(
+          currentCategory: _currentCategory,
+          onCategoryTap: _onCategoryTap,
+        ),
+        frontTitle: Text('SHRINE'),
+        backTitle: Text('MENU'),
+      ),
+      // TODO: Add a theme (103)
+    );
+  }
+}
 
 class Feed extends StatelessWidget {
   List<Card> _buildGridCards(BuildContext context) {
@@ -70,43 +109,6 @@ class Feed extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
-        // barra de navegacion
-        appBar: AppBar(
-          elevation: 3,
-          brightness: Brightness.dark,
-          backgroundColor: Color.fromRGBO(254, 219, 208, 1.0),
-          //Iconos de busqueda y filtro
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.search,
-                  semanticLabel: 'search', color: Colors.black),
-              onPressed: () {
-                print('Search');
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.tune,
-                  semanticLabel: 'filter', color: Colors.black),
-              onPressed: () {
-                print('filter');
-              },
-            ),
-          ],
-
-          //Icono de menu
-          leading: IconButton(
-            icon: Icon(Icons.menu, semanticLabel: 'menu', color: Colors.black),
-            onPressed: () {
-              print('Menu button');
-            },
-          ),
-          title: Text(
-            'STORE',
-            style: TextStyle(color: Colors.black),
-          ),
-        ),
-
-        //cuerpo
         body: GridView.count(
             crossAxisCount: 2,
             padding: EdgeInsets.all(16.0),

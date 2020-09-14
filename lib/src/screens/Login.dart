@@ -85,7 +85,7 @@ class LoginPage extends StatelessWidget {
                         height: 60,
                         onPressed: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Feed()));
+                              MaterialPageRoute(builder: (context) => Base()));
                         },
                         color: Color.fromRGBO(254, 219, 208, 1.0),
                         child: Text(
