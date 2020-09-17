@@ -1,10 +1,16 @@
+import 'package:coivd_app2/model/product.dart';
 import 'package:coivd_app2/src/screens/Login.dart';
 import 'package:coivd_app2/src/screens/Signup.dart';
 import 'package:flutter/material.dart';
 //import '../colors.dart';
 
 //diseño principal
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

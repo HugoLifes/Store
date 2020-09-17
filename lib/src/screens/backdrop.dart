@@ -28,12 +28,10 @@ class Backdrop extends StatefulWidget {
   _BackdropState createState() => _BackdropState();
 }
 
-// TODO: Add _BackdropState class (104)
 class _BackdropState extends State<Backdrop>
     with SingleTickerProviderStateMixin {
   final GlobalKey _backdropKey = GlobalKey(debugLabel: 'Backdrop');
 
-  // TODO: Add AnimationController widget (104)
   AnimationController _controller;
   @override
   void initState() {
@@ -73,13 +71,11 @@ class _BackdropState extends State<Backdrop>
         velocity: _frontLayerVisible ? -_kFlingVelocity : _kFlingVelocity);
   }
 
-  // TODO: Add BuildContext and BoxConstraints parameters to _buildStack (104)
   Widget _buildStack(BuildContext context, BoxConstraints constraints) {
     const double layerTitleHeight = 48.0;
     final Size layerSize = constraints.biggest;
     final double layerTop = layerSize.height - layerTitleHeight;
 
-    // TODO: Create a RelativeRectTween Animation (104)
     Animation<RelativeRect> layerAnimation = RelativeRectTween(
       begin: RelativeRect.fromLTRB(
           0.0, layerTop, 0.0, layerTop - layerSize.height),
@@ -89,23 +85,23 @@ class _BackdropState extends State<Backdrop>
     return Stack(
       key: _backdropKey,
       children: <Widget>[
-        // TODO: Wrap backLayer in an ExcludeSemantics widget (104)
+        widget.backLayer,
+        _FrontLayer(
+          child: widget.frontLayer,
+        ),
         ExcludeSemantics(
           child: widget.backLayer,
           excluding: _frontLayerVisible,
         ),
-        // TODO: Add a PositionedTransition (104)
         PositionedTransition(
           rect: layerAnimation,
           child: _FrontLayer(
-            // TODO: Implement onTap property on _BackdropState (104)
             child: widget.frontLayer,
           ),
         ),
         PositionedTransition(
           rect: layerAnimation,
           child: _FrontLayer(
-            // TODO: Implement onTap property on _BackdropState (104)
             onTap: _toggleBackdropLayerVisibility,
             child: widget.frontLayer,
           ),
@@ -138,27 +134,27 @@ class _BackdropState extends State<Backdrop>
       ],
 
       //Icono de menu
-      leading: IconButton(
+      /* eading: IconButton(
         icon: Icon(Icons.menu, semanticLabel: 'menu', color: Colors.black),
         onPressed: _toggleBackdropLayerVisibility,
-      ),
-      title: Text(
-        'STORE',
-        style: TextStyle(color: Colors.black),
+      ), */
+      title: _BackdropTitle(
+        listenable: _controller.view,
+        onPress: _toggleBackdropLayerVisibility,
+        frontTitle: widget.frontTitle,
+        backTitle: widget.backTitle,
       ),
     );
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: appBar,
-      // TODO: Return a LayoutBuilder widget (104)
       body: LayoutBuilder(builder: _buildStack),
     );
   }
 }
 
-// TODO: Add _FrontLayer class (104)
 class _FrontLayer extends StatelessWidget {
-  // TODO: Add on-tap callback (104)
   const _FrontLayer({
     Key key,
     this.onTap,
@@ -190,6 +186,90 @@ class _FrontLayer extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _BackdropTitle extends AnimatedWidget {
+  final Function onPress;
+  final Widget frontTitle;
+  final Widget backTitle;
+
+  const _BackdropTitle({
+    Key key,
+    Listenable listenable,
+    this.onPress,
+    @required this.frontTitle,
+    @required this.backTitle,
+  })  : assert(frontTitle != null),
+        assert(backTitle != null),
+        super(key: key, listenable: listenable);
+
+  @override
+  Widget build(BuildContext context) {
+    final Animation<double> animation = this.listenable;
+
+    return DefaultTextStyle(
+      style: Theme.of(context).primaryTextTheme.headline6,
+      softWrap: false,
+      overflow: TextOverflow.ellipsis,
+      child: Row(children: <Widget>[
+        // branded icon
+        SizedBox(
+          width: 50.0,
+          child: IconButton(
+            padding: EdgeInsets.only(right: 25.0),
+            onPressed: this.onPress,
+            icon: Stack(children: <Widget>[
+              Opacity(
+                opacity: animation.value,
+                child: ImageIcon(AssetImage('assets/images/slanted_menu.png'),
+                    color: Colors.black),
+              ),
+              FractionalTranslation(
+                translation: Tween<Offset>(
+                  begin: Offset.zero,
+                  end: Offset(1.0, 0.0),
+                ).evaluate(animation),
+                child: ImageIcon(AssetImage('assets/images/diamond.png'),
+                    color: Colors.black),
+              )
+            ]),
+          ),
+        ),
+        // Here, we do a custom cross fade between backTitle and frontTitle.
+        // This makes a smooth animation between the two texts.
+        Stack(
+          children: <Widget>[
+            Opacity(
+              opacity: CurvedAnimation(
+                parent: ReverseAnimation(animation),
+                curve: Interval(0.5, 1.0),
+              ).value,
+              child: FractionalTranslation(
+                translation: Tween<Offset>(
+                  begin: Offset.zero,
+                  end: Offset(0.5, 0.0),
+                ).evaluate(animation),
+                child: backTitle,
+              ),
+            ),
+            Opacity(
+              opacity: CurvedAnimation(
+                parent: animation,
+                curve: Interval(0.5, 1.0),
+              ).value,
+              child: FractionalTranslation(
+                translation: Tween<Offset>(
+                  begin: Offset(-0.25, 0.0),
+                  end: Offset.zero,
+                ).evaluate(animation),
+                child: frontTitle,
+              ),
+            ),
+          ],
+        )
+      ]),
     );
   }
 }
