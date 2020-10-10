@@ -85,9 +85,20 @@ En Store encontraras productos para dama y caballero como articulos para el hoga
 
 ### 2.1 Perspectiva del producto
 
+La plataforma STORE permitirá dar el sustento total de una aplicación de comercio electrónico enfocado para proveer un portal entre consumidores a nivel nacional y los productos de nuestra tienda departamental, proporcionando el catalogo de venta, un carrito de compras eletrónico, formas de pago en línea.
+
 ### 2.2 Funcionalidad del producto
 
+La versión 1.0.0 de la aplicación contará con las siguientes funcionalidades:
+
+* __Registro__: Esta función permite a al usuario dar de alta una cuenta para tener un acceso propio a aplicación. El registro puede ser mediante correo electrónico o vinculando una cuenta de google.
+* __Inicio de sesión__: Acceso a la aplicación con el prerequisito de un registro previo. El inicio puede ser mediante correo electrónico o vinculando una cuenta de google.
+* __Busqueda__: Función de filtrado específica para localizar productos mediante el nombre.
+* __Catalogo__: Tarjetas individuales de cada producto disponible en la tienda, incluye nombre, descripción, precio y boton de carrito.
+* __Carrito de compra__: Cesta de artículos que el cliente genera en base a los productos que quiere comprar en el momento, con el fin de hacer un solo pago individual al final del proceso.
+
 ### 2.3 Características de usuario
+
 | Actores | Descripcion |
 |-|-|
 |Clientes casuales| Crean cuenta de usuario, revisan el contenido si es de su agrado. |
@@ -97,11 +108,13 @@ En Store encontraras productos para dama y caballero como articulos para el hoga
 |Clientes por mayores| Al comprar mas de cierto presupuesto su envio sera gratuito.|
 
 ### 2.4 Restricciones
+
 |Restricciones|Descripcion|
 |-|-|
 |Coste|La aplicacion propone que al principio de año tenga una ganancia de 60,000 de esta manera se recuperaria lo invertido y podriamos seguir apostando por el proyecto.|
 |Tiempo| La aplicacion fue creada en 42 dias habiles segun el formato a seguir de la planeacion del proyecto.|
 |Alcance|La aplicacion finalmente sera lanzada para Android e IOS en sus respectivas tiendas podran bajar y hacer uso de la aplicacion version 1.0.0.|
+
 ## 3. Requerimientos
 
 ### 3.1 Requerimientos funcionales
