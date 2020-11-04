@@ -118,6 +118,17 @@ La versión 1.0.0 de la aplicación contará con las siguientes funcionalidades:
 ## 3. Requerimientos
 
 ### 3.1 Requerimientos funcionales
+|ID|Requisito|patrón arquitectonico|
+|-|-|-|
+|RF1|Autenticacion|Arquitectura orientada a servicios|
+|RF2|Autorización|Arquitectura orientada a servicios|
+|RF3|Asignacion de funcionalidades|MVC|
+|RF4|Operaciones CRUD|Capas, MVC|
+|RF5|Envios y recepcion de datos|Arquitectura de datos|
+|RF6|Envio y recepciond e datos deacuerdo a un modelo definido|Arquitectura orientada a servicios|
+|RF7|Interconexion entre componentes - servicios||
+|RF8|Abstraccion de diseño de sistemas de datos relacionales|Capas|
+
 
 ### 3.2 Diseño
 
