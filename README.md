@@ -126,7 +126,7 @@ La versión 1.0.0 de la aplicación contará con las siguientes funcionalidades:
 |RF4|Operaciones CRUD|Capas, MVC|
 |RF5|Envios y recepcion de datos|Arquitectura de datos|
 |RF6|Envio y recepciond e datos deacuerdo a un modelo definido|Arquitectura orientada a servicios|
-|RF7|Interconexion entre componentes - servicios||
+|RF7|Interconexion entre componentes - servicios|Arquitectura orientada a servicios|
 |RF8|Abstraccion de diseño de sistemas de datos relacionales|Capas|
 
 
