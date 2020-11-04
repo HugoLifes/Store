@@ -134,6 +134,13 @@ La versión 1.0.0 de la aplicación contará con las siguientes funcionalidades:
 
 #### 3.2.1 Interfaz de usuario
 
+<img src="documento/app.png" alt="" width="30%">
+<img src="documento/login.png" alt="" width="30%">
+<img src="documento/signup.png" alt="" width="30%">
+<img src="documento/menu.png" alt="" width="30%">
+<img src="documento/feed.png" alt="" width="30%">
+<img src="documento/feed2.png" alt="" width="30%">
+
 ## Anexo A: Planificación inicial del proyecto 
 
 <img src="cronograma.png" alt="" width="100%">
