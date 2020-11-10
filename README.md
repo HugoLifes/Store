@@ -81,6 +81,7 @@ El proyecto no incluye la seleccion de paqueteria con el que se desea entregar e
 
 
 ## 2. Descripción general
+
 En Store encontraras productos para dama y caballero como articulos para el hogar y todo a la palma de tu mando, encuentra todo lo que te guste y comparlo en linea, lo recibiras desde la comodidad de tu hogar sin tener que salir de el, protegemos a los nuestros.
 
 ### 2.1 Perspectiva del producto
@@ -119,25 +120,32 @@ La versión 1.0.0 de la aplicación contará con las siguientes funcionalidades:
 
 ### 3.1 Requerimientos funcionales
 
+| ID | Nombre | Prioridad | Descripción | Dependencias |
+| - | - | - | - | - |
+| RF01 | Registro de usuario | Alta | Registrar un nuevo usuario en la base de datos de la aplicación, requiere ingresar correo y contraseña | Acceso a internet |
+| RF02 | Inicio de sesión de usuario | Alta | Usuarios ya existentes podrán acceder a la aplicación, requiere ingresar correo y contraseña | Registro de usuario |
+| RF03 | Busqueda de artículos | Media | Reaizar búsquedas solo por nombre de producto | Inicio de sesión de usuario |
+| RF04 | Filtro de precio | Baja | Filtrar productos por rango de precios | Inicio de sesió den usuario |
+| RF05 | Visualizar productos por catálogo | Media | Proporcionar distintos catálogos de productos en base a una etiqueta, categoría o todos en general | Inicio de sesión de usuario |
+| RF06 | Visualizar productos individualmente | Media | Seleccionar productos para ver más información | Inicio de sesión de usuario, Visualizar productos por catálogo |
+| RF07 | Agregar productos al carrito | Media | Guardar productos al gusto del usuario, para posteriormente comprarlos o solo guardarlos | Inicio de sesión de usuario, Visualizar productos individualmente |
 
+### 3.1 Requerimientos no funcionales
 
 |ID|Requisito|patrón arquitectonico|
 |-|-|-|
-|RF1|Autenticacion|Arquitectura orientada a servicios|
-|RF2|Autorización|Arquitectura orientada a servicios|
-|RF3|Asignacion de funcionalidades|MVC|
-|RF4|Operaciones CRUD|Capas, MVC|
-|RF5|Envios y recepcion de datos|Arquitectura de datos|
-|RF6|Envio y recepciond e datos deacuerdo a un modelo definido|Arquitectura orientada a servicios|
-|RF7|Interconexion entre componentes - servicios|Arquitectura orientada a servicios|
-|RF8|Abstraccion de diseño de sistemas de datos relacionales|Capas|
+|RNF1|Autenticacion|Arquitectura orientada a servicios|
+|RNF2|Autorización|Arquitectura orientada a servicios|
+|RNF3|Asignacion de funcionalidades|MVC|
+|RNF4|Operaciones CRUD|Capas, MVC|
+|RNF5|Envios y recepcion de datos|Arquitectura de datos|
+|RNF6|Envio y recepciond e datos deacuerdo a un modelo definido|Arquitectura orientada a servicios|
+|RNF7|Interconexion entre componentes - servicios|Arquitectura orientada a servicios|
+|RNF8|Abstraccion de diseño de sistemas de datos relacionales|Capas|
 
+### 3.3 Diseño
 
-### 3.2 Diseño
-
-#### 3.2.1 Interfaz de usuario
-
-
+#### 3.3.1 Interfaz de usuario
 
 <br>
 
