@@ -130,18 +130,18 @@ La versión 1.0.0 de la aplicación contará con las siguientes funcionalidades:
 | RF06 | Visualizar productos individualmente | Media | Seleccionar productos para ver más información | Inicio de sesión de usuario, Visualizar productos por catálogo |
 | RF07 | Agregar productos al carrito | Media | Guardar productos al gusto del usuario, para posteriormente comprarlos o solo guardarlos | Inicio de sesión de usuario, Visualizar productos individualmente |
 
-### 3.1 Requerimientos no funcionales
+### 3.2 Requerimientos específicos
 
-|ID|Requisito|patrón arquitectonico|
-|-|-|-|
-|RNF1|Autenticacion|Arquitectura orientada a servicios|
-|RNF2|Autorización|Arquitectura orientada a servicios|
-|RNF3|Asignacion de funcionalidades|MVC|
-|RNF4|Operaciones CRUD|Capas, MVC|
-|RNF5|Envios y recepcion de datos|Arquitectura de datos|
-|RNF6|Envio y recepciond e datos deacuerdo a un modelo definido|Arquitectura orientada a servicios|
-|RNF7|Interconexion entre componentes - servicios|Arquitectura orientada a servicios|
-|RNF8|Abstraccion de diseño de sistemas de datos relacionales|Capas|
+| ID | Requisito | patrón arquitectonico |
+| - | - | - |
+| RNF01 |Autenticacion | Arquitectura orientada a servicios |
+| RNF02 |Autorización | Arquitectura orientada a servicios |
+| RNF03 |Asignacion de funcionalidades | MVC |
+| RNF04 |Operaciones CRUD | Capas, MVC |
+| RNF05 | Envios y recepcion de datos |Arquitectura de datos |
+| RNF06 | Envio y recepciond e datos deacuerdo a un modelo definido | Arquitectura orientada a servicios |
+| RNF07 | Interconexion entre componentes - servicios|Arquitectura orientada a servicios |
+| RNF08 | Abstraccion de diseño de sistemas de datos relacionales | Capas |
 
 ### 3.3 Diseño
 
