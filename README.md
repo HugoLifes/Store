@@ -118,6 +118,9 @@ La versión 1.0.0 de la aplicación contará con las siguientes funcionalidades:
 ## 3. Requerimientos
 
 ### 3.1 Requerimientos funcionales
+
+
+
 |ID|Requisito|patrón arquitectonico|
 |-|-|-|
 |RF1|Autenticacion|Arquitectura orientada a servicios|
@@ -135,11 +138,52 @@ La versión 1.0.0 de la aplicación contará con las siguientes funcionalidades:
 #### 3.2.1 Interfaz de usuario
 
 <img src="documento/app.png" alt="" width="30%">
+
+<br>
+
+__Interfaz inicial__
+
+Al abrir la aplicación en su primer uso el usuario se encontrará con la pantalla de presentación e acceso. Aquí se presenta dos opciones, que el usuario ingrese a la aplicación con una cuenta existente o darse de alta como un usuario nuevo.
+
 <img src="documento/login.png" alt="" width="30%">
+
+<br>
+
+__Iniciar sesión__
+
+Si el usuario ya se había registrado con anterioridad típicamente accederá a la pantalla de Log In para introducir su correo eletrónico y su contraseña, una vez hecho esto solo tiene que presionar el botón __Log In__, esto dará acceso al contenido de la aplicación.
+
 <img src="documento/signup.png" alt="" width="30%">
-<img src="documento/menu.png" alt="" width="30%">
+
+<br>
+
+__Registro__
+
+Para usuarios nuevos es necesario dar de alta su correo eletrónico y contraseña para registrarlo en la base de datos del sistema, seguidamente solo tiene que presionar el botón de __Sign In__, en caso de no introducir la contraseña exactamente igual en los dos campos se reiniciará esta pantalla, y si fue correcto se redireccionará a la pantalla de Log In para ingresar.
+
 <img src="documento/feed.png" alt="" width="30%">
+
+<br>
+
+__Catálogo inicial__
+
+Una vez identificado el usuario se redireccionará a catálogo principal donde se le mostrará productos de variedad. En esta interfaz el usuario puede visualizar de manera rápida los productos con su nombre y y precio, adicionalmente siempre tendrá acceso a realizar busquedas por nombre, aplicar filtros simples de precio y un botón de menú.
+
+<img src="documento/menu.png" alt="" width="30%">
+
+<br>
+
+__Menú__
+
+El usuario podrá navegar entre productos de un tipo de clasificación, actualmente sólo se cuenta con tres categorías, al seleccionar una de ellas será redireccionado a catálogos de ese tipo.
+
 <img src="documento/feed2.png" alt="" width="30%">
+
+<br>
+
+__Catálogos específicos__
+
+Estos catálogos muestran productos bajo una clasificación o etiqueta, esta interfaz es resultado de los catálogos seleccionados del menú y, resultados de busquedas y filtros.
 
 ## Anexo A: Planificación inicial del proyecto 
 
