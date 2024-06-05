@@ -1,2 +1,2 @@
 # Store
-App para ventas
+See branch 2.0
